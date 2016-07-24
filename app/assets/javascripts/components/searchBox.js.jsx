@@ -99,8 +99,9 @@ var SearchBox = React.createClass({
 {"Text":"X Marks the spot","Meaning":"When someone finds something they have been looking for."},
 {"Text":"You can say that again","Meaning":"That is very true; expression of wholehearted agreement"}];
     var filterByTerm = function(term){
+      var downcasedTerm = term.toLowerCase()
       return $.grep(idioms, function(idiom) {
-        return ((idiom.Meaning.toLowerCase().indexOf(term) > -1) || (idiom.Text.toLowerCase().indexOf(term) > -1));
+        return ((idiom.Meaning.toLowerCase().indexOf(downcasedTerm) > -1) || (idiom.Text.toLowerCase().indexOf(downcasedTerm) > -1));
       });
     };
     
