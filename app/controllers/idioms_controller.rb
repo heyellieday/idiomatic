@@ -2,7 +2,7 @@ class IdiomsController < ApplicationController
   def start_search
     set_meta_tags({
       :title => 'The meaning of idioms',
-      :description => '',
+      :description => 'Search for and discover the meanings of common idioms.',
       :og => {
         :title    => :title,
         :type     => 'website',
