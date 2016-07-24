@@ -100,14 +100,14 @@ var SearchBox = React.createClass({
 {"Text":"You can say that again","Meaning":"That is very true; expression of wholehearted agreement"}];
     var filterByTerm = function(term){
       return $.grep(idioms, function(idiom) {
-        return ((idiom.Meaning.indexOf(term) > -1) || (idiom.Text.indexOf(term) > -1));
+        return ((idiom.Meaning.toLowerCase().indexOf(term) > -1) || (idiom.Text.toLowerCase().indexOf(term) > -1));
       });
     };
     
     var filteredIdioms = filterByTerm(this.state.searchTerm);;
     return (
       <div id="SearchBox">
-        <input className="searchField" placeholder="It's raining cats and dogs" value={this.state.searchTerm} onChange={this.handleTextChange} />
+        <input className="searchField" placeholder="Search for an idiom like 'It's raining cats and dogs'" value={this.state.searchTerm} onChange={this.handleTextChange} />
         {
           filteredIdioms.map(function(idiom){
             return <Idiom text={idiom.Text} meaning={idiom.Meaning}/>;
