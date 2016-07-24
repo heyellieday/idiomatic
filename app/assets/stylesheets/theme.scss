@@ -4,17 +4,38 @@ body{
    font-family: $font-stack;
   #IdiomApp {
     font-size: 16px;
+    max-width: 900px;
     #Header{
+      padding-top: 50px;
       margin: 0 auto;
       width: 100%;
       text-align: center;
+      .logo{
+        width: 300px;
+        height: auto;
+        margin-bottom: 25px;
+      }
       .description{
-
+        font-size: 16px;
+        width: 50%;
+        margin: 0 auto;
       }
     }
     #SearchBox{
       width: 100%;
       margin: 0 auto;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      .searchField{
+        display: table;
+        width: 60%;
+        height: 40px;
+        border-radius: 0px;
+        border: 0px;
+        padding-left: 15px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
     }
   }  
 }

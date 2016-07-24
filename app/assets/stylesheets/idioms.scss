@@ -1,3 +1,24 @@
 // Place all the styles related to the Idioms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.idiom{
+  background-color: white;
+  padding: 40px;
+  padding-top:10px;
+  margin-bottom: 40px;
+  .heading{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $heading-color;
+  }
+  .attribute{
+    font-family: "Lora", sans-serif;
+  }
+  .meaning{
+    font-size: 20px;
+  }
+  .text{
+    font-size: 40px;
+  }
+}
