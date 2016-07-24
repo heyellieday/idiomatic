@@ -107,7 +107,7 @@ var SearchBox = React.createClass({
     var filteredIdioms = filterByTerm(this.state.searchTerm);;
     return (
       <div id="SearchBox">
-        <input className="searchField" placeholder="Search for an idiom like 'It's raining cats and dogs'" value={this.state.searchTerm} onChange={this.handleTextChange} />
+        <input className="searchField" placeholder="Search for an idiom like 'Raining cats and dogs'" value={this.state.searchTerm} onChange={this.handleTextChange} />
         {
           filteredIdioms.map(function(idiom){
             return <Idiom text={idiom.Text} meaning={idiom.Meaning}/>;
