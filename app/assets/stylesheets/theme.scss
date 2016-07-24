@@ -7,6 +7,9 @@ body{
     max-width: 900px;
     #Header{
       padding-top: 50px;
+      @media (max-width: 768px) {
+        padding-top: 30px;
+      }
       margin: 0 auto;
       width: 100%;
       text-align: center;
@@ -14,11 +17,17 @@ body{
         width: 300px;
         height: auto;
         margin-bottom: 25px;
+        @media (max-width: 768px) {
+          width: 225px;
+        }
       }
       .description{
         font-size: 16px;
         width: 50%;
         margin: 0 auto;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
       }
     }
     #SearchBox{
@@ -26,6 +35,7 @@ body{
       margin: 0 auto;
       margin-bottom: 40px;
       margin-top: 40px;
+      display: relative;
       .searchField{
         display: table;
         width: 60%;
@@ -35,6 +45,16 @@ body{
         padding-left: 15px;
         margin: 0 auto;
         margin-bottom: 40px;
+        @media (max-width: 768px) {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+      .searchField:after{
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        content: "<i class=\"fa fa-search\"></i>"
       }
     }
   }  
